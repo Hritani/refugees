@@ -1,3 +1,5 @@
+// import { defineNuxtConfig } from 'nuxt'
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   build: {
@@ -12,6 +14,10 @@ export default defineNuxtConfig({
         : ['@juggle/resize-observer']
   },
   vite: {
+    // @ts-ignore
+    commonjsOptions: {
+      esmExternals: true
+    },
     optimizeDeps: {
       include:
         process.env.NODE_ENV === 'development'

@@ -1,17 +1,25 @@
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent, ref } from 'vue'
 import {
   darkTheme,
-  NConfigProvider, NDialogProvider,
+  NConfigProvider,
+  NDialogProvider,
   NLoadingBarProvider,
   NMessageProvider,
-  NNotificationProvider,
+  NNotificationProvider
 } from 'naive-ui'
 import type { GlobalTheme } from 'naive-ui'
 import DefaultLayout from '~/layouts/default.vue'
 
 export default defineComponent({
-  components: { NDialogProvider, NLoadingBarProvider, NNotificationProvider, NMessageProvider, DefaultLayout, NConfigProvider },
+  components: {
+    DefaultLayout,
+    NDialogProvider,
+    NLoadingBarProvider,
+    NNotificationProvider,
+    NMessageProvider,
+    NConfigProvider
+  },
   setup() {
     return {
       darkTheme
