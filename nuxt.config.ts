@@ -14,10 +14,6 @@ export default defineNuxtConfig({
         : ['@juggle/resize-observer']
   },
   vite: {
-    // @ts-ignore
-    commonjsOptions: {
-      esmExternals: true
-    },
     optimizeDeps: {
       include:
         process.env.NODE_ENV === 'development'
